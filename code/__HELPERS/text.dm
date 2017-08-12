@@ -1,15 +1,4 @@
 /*
- * Holds procs designed to help with filtering text
- * Contains groups:
- *			SQL sanitization/formating
- *			Text sanitization
- *			Text searches
- *			Text modification
- *			Misc
- */
-
-
-/*
  * SQL sanitization
  */
 
@@ -36,8 +25,12 @@
 			index = findtext(t, char)
 	return t
 
+/proc/paranoid_sanitize(t)
+	var/regex/alphanum_only = regex("\[^a-zA-Z0-9# ]", "g")
+	return alphanum_only.Replace(t, "#")
+
 //Removes a few problematic characters
-/proc/sanitize_simple(t,list/repl_chars = list("\n"="#","\t"="#"))
+/proc/sanitize_simple(t,list/repl_chars = list("ÿ"="____255_"))
 	for(var/char in repl_chars)
 		var/index = findtext(t, char)
 		while(index)
@@ -47,12 +40,9 @@
 
 //Runs byond's sanitization proc along-side sanitize_simple
 /proc/sanitize(t,list/repl_chars = null)
-	return html_encode(sanitize_simple(t,repl_chars))
-
-/proc/paranoid_sanitize(t)
-	var/regex/alphanum_only = regex("\[^a-zA-Z0-9# ]", "g")
-	return alphanum_only.Replace(t, "#")
-
+	t = html_encode(trim(sanitize_simple(t, repl_chars)))
+	t = replacetext(t, "____255_", "&#255;")//cp1251
+	return t
 
 //Runs sanitize and strip_html_simple
 //I believe strip_html_simple() is required to run first to prevent '<' from displaying as '&lt;' after sanitize() calls byond's html_encode()
@@ -74,8 +64,8 @@
 		switch(text2ascii(text,i))
 			if(62,60,92,47)
 				return			//rejects the text if it contains these bad characters: <, >, \ or /
-			if(127 to 255)
-				return			//rejects weird letters like ï¿½
+		//	if(127 to 255)
+		//		return			//rejects weird letters like ï¿½
 			if(0 to 31)
 				return			//more weird stuff
 			if(32)
@@ -89,18 +79,24 @@
 // no_trim is self explanatory but it prevents the input from being trimed if you intend to parse newlines or whitespace.
 /proc/stripped_input(mob/user, message = "", title = "", default = "", max_length=MAX_MESSAGE_LEN, no_trim=FALSE)
 	var/name = input(user, message, title, default) as text|null
+	name = replacetext(name, "ÿ", "___255_")
 	if(no_trim)
-		return copytext(html_encode(name), 1, max_length)
+		name = copytext(html_encode(name), 1, max_length)
 	else
-		return trim(html_encode(name), max_length) //trim is "outside" because html_encode can expand single symbols into multiple symbols (such as turning < into &lt;)
+		name = trim(html_encode(name), max_length) //trim is "outside" because html_encode can expand single symbols into multiple symbols (such as turning < into &lt;)
+	name = replacetext(name, "___255_", "ÿ")
+	return name //trim is "outside" because html_encode can expand single symbols into multiple symbols (such as turning < into &lt;)
 
 // Used to get a properly sanitized multiline input, of max_length
 /proc/stripped_multiline_input(mob/user, message = "", title = "", default = "", max_length=MAX_MESSAGE_LEN, no_trim=FALSE)
 	var/name = input(user, message, title, default) as message|null
+	name = replacetext(name, "ÿ", "___255_")
 	if(no_trim)
-		return copytext(html_encode(name), 1, max_length)
+		name = copytext(html_encode(name), 1, max_length)
 	else
-		return trim(html_encode(name), max_length)
+		name = html_encode(trim(name, max_length)) //trim is "inside" because html_encode can expand single symbols into multiple symbols (such as turning < into &lt;)
+	name = replacetext(name, "___255_", "ÿ")
+	return name
 
 //Filters out undesirable characters from names
 /proc/reject_bad_name(t_in, allow_numbers=0, max_length=MAX_NAME_LEN)
@@ -565,7 +561,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 	var/next_backslash = findtext(string, "\\")
 	if(!next_backslash)
 		return string
-	
+
 	var/leng = length(string)
 
 	var/next_space = findtext(string, " ", next_backslash + 1)
