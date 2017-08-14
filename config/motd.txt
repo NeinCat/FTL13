@@ -1,5 +1,11 @@
-<!-- Most valid html will work in here, excluding images. -->
+﻿<h1>Добро пожаловать на сервер [RU] Red Lazarus!</h1>
+В использовании сервера - билд FTL13 с нашими корректировками.
 
-<h1>Welcome to Space Station 13!</h1>
+Форум сервера:		        http://redlazarus.com/
+Правила сервера:		https://discord.gg/q8zgKYn - канал "#info"
+Вики FTL13:		https://ftl13.com/wiki/index.php?title=
+Код сервера:			https://github.com/NeinCat/FTL13
+Дискорд-сервер:                 https://discord.gg/q8zgKYn
 
-<i>This server is running a /tg/station 13 Git build.</i>
+<span style="color: #0000ff;">Есть интересующий вопрос? Спроси Администратора (F1)!</span>
+
