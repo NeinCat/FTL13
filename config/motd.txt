@@ -1,11 +1,11 @@
-п»ї<h1>Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ РЅР° СЃРµСЂРІРµСЂ [RU] Red Lazarus!</h1>
-Р’ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё СЃРµСЂРІРµСЂР° - Р±РёР»Рґ FTL13 СЃ РЅР°С€РёРјРё РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєР°РјРё.
+<h1>Добро пожаловать на сервер [RU] Red Lazarus!</h1>
+В использовании сервера - билд FTL13 с нашими корректировками.
 
-Р¤РѕСЂСѓРј СЃРµСЂРІРµСЂР°:		        http://redlazarus.com/
-РџСЂР°РІРёР»Р° СЃРµСЂРІРµСЂР°:		https://discord.gg/q8zgKYn - РєР°РЅР°Р» "#info"
-Р’РёРєРё FTL13:		https://ftl13.com/wiki/index.php?title=
-РљРѕРґ СЃРµСЂРІРµСЂР°:			https://github.com/NeinCat/FTL13
-Р”РёСЃРєРѕСЂРґ-СЃРµСЂРІРµСЂ:                 https://discord.gg/q8zgKYn
+Форум сервера:		        http://redlazarus.com/
+Правила сервера:		https://discord.gg/q8zgKYn - канал "#info"
+Вики FTL13:		https://ftl13.com/wiki/index.php?title=
+Код сервера:			https://github.com/NeinCat/FTL13
+Дискорд-сервер:                 https://discord.gg/q8zgKYn
 
-<span style="color: #0000ff;">Р•СЃС‚СЊ РёРЅС‚РµСЂРµСЃСѓСЋС‰РёР№ РІРѕРїСЂРѕСЃ? РЎРїСЂРѕСЃРё РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР° (F1)!</span>
+<span style="color: #0000ff;">Есть интересующий вопрос? Спроси Администратора (F1)!</span>
 
