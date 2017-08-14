@@ -409,3 +409,11 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 	to_chat(src, "You will [(prefs.chat_toggles & CHAT_PRAYER) ? "now" : "no longer"] see prayerchat.")
 	SSblackbox.add_details("admin_toggle","Toggle Prayer Visibility|[prefs.chat_toggles & CHAT_PRAYER]") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+/client/verb/listen_looc()
+	set name = "Show/Hide LOOC"
+	set category = "Preferences"
+	set desc = "Toggles seeing Local OutOfCharacter chat"
+	prefs.chat_toggles ^= CHAT_LOOC
+	prefs.save_preferences(src)
+	src << "You will [(prefs.chat_toggles & CHAT_LOOC) ? "now" : "no longer"] see messages on the LOOC channel."
+	SSblackbox.add_details("admin_verb","TLOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
