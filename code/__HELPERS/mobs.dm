@@ -47,6 +47,7 @@
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/socks, GLOB.socks_list)
 	return pick(GLOB.socks_list)
 
+
 /proc/random_features()
 	if(!GLOB.tails_list_human.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/human, GLOB.tails_list_human)
@@ -66,11 +67,19 @@
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/legs, GLOB.legs_list)
 	if(!GLOB.body_markings_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/body_markings, GLOB.body_markings_list)
+	if(!GLOB.hair_styles_tajaran_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/thair, GLOB.hair_styles_tajaran_list)
+	if(!GLOB.tails_list_tajaran.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/tajaran, GLOB.tails_list_tajaran)
+	if(!GLOB.ears_tajaran_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/ears/tajaran, GLOB.ears_tajaran_list)
+	if(!GLOB.hair_styles_skrell_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/shair, GLOB.hair_styles_skrell_list)
 	if(!GLOB.wings_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/wings, GLOB.wings_list)
 
 	//For now we will always return none for tail_human and ears.
-	return(list("mcolor" = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F"), "tail_lizard" = pick(GLOB.tails_list_lizard), "tail_human" = "None", "wings" = "None", "snout" = pick(GLOB.snouts_list), "horns" = pick(GLOB.horns_list), "ears" = "None", "frills" = pick(GLOB.frills_list), "spines" = pick(GLOB.spines_list), "body_markings" = pick(GLOB.body_markings_list), "legs" = "Normal Legs"))
+	return(list("mcolor" = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F"), "tail_lizard" = pick(GLOB.tails_list_lizard), "tail_human" = "None", "wings" = "None", "snout" = pick(GLOB.snouts_list), "horns" = pick(GLOB.horns_list), "ears" = "None", "frills" = pick(GLOB.frills_list), "spines" = pick(GLOB.spines_list), "body_markings" = pick(GLOB.body_markings_list), "tajaran_hair" = pick(GLOB.hair_styles_tajaran_list), "tail_tajaran" = pick(GLOB.tails_list_tajaran), "ears_tajaran" = pick(GLOB.ears_tajaran_list), "skrell_hair" = pick(GLOB.hair_styles_skrell_list), "legs" = "Normal Legs", ))
 
 /proc/random_hair_style(gender)
 	switch(gender)
@@ -106,6 +115,14 @@
 
 		if(i != attempts_to_find_unique_name && !findname(.))
 			break
+
+/proc/random_unique_originslime_name(gender, attempts_to_find_unique_name=10)
+	for(var/i=1, i<=attempts_to_find_unique_name, i++)
+		. = capitalize(originslime_name(gender))
+
+		if(i != attempts_to_find_unique_name && !findname(.))
+			break
+
 
 /proc/random_unique_plasmaman_name(attempts_to_find_unique_name=10)
 	for(var/i=1, i<=attempts_to_find_unique_name, i++)

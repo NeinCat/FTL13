@@ -1,0 +1,13 @@
+{
+    "map_name": "Lazarus Ship",
+    "map_path": "map_files/lazarusship",
+    "map_file": "lazarusship.dmm",
+    "minetype": "lavaland",
+    "transition_config": "default"
+	
+	"ftl_ship_dir": "WEST"
+	"ftl_ship_dwidth": "67"
+	"ftl_ship_dheight": "62"
+	"ftl_ship_width": "73"
+	"ftl_ship_height": "113"
+}

@@ -15,6 +15,8 @@ GLOBAL_LIST_INIT(carp_names, world.file2list("strings/names/carp.txt"))
 GLOBAL_LIST_INIT(golem_names, world.file2list("strings/names/golem.txt"))
 GLOBAL_LIST_INIT(plasmaman_names, world.file2list("strings/names/plasmaman.txt"))
 GLOBAL_LIST_INIT(posibrain_names, world.file2list("strings/names/posibrain.txt"))
+GLOBAL_LIST_INIT(originslime_names_male, world.file2list("strings/names/originslime_male.txt"))
+GLOBAL_LIST_INIT(originslime_names_female, world.file2list("strings/names/originslime_female.txt"))
 
 
 GLOBAL_LIST_INIT(verbs, world.file2list("strings/names/verbs.txt"))

@@ -1,4 +1,4 @@
-## HEALTH ###
+﻿## HEALTH ###
 
 ##Damage multiplier, effects both weapons and healing on all mobs. For example, 1.25 would result in 25% higher damage.
 DAMAGE_MULTIPLIER 1
@@ -58,12 +58,12 @@ ANIMAL_DELAY 1
 
 
 ## ALERT LEVELS ###
-ALERT_GREEN All threats to the station have passed. Security may not have weapons visible, privacy laws are once again fully enforced.
-ALERT_BLUE_UPTO The station has received reliable information about possible hostile activity on the station. Security staff may have weapons visible, random searches are permitted.
-ALERT_BLUE_DOWNTO The immediate threat has passed. Security may no longer have weapons drawn at all times, but may continue to have them visible. Random searches are still allowed.
-ALERT_RED_UPTO There is an immediate serious threat to the station. Security may have weapons unholstered at all times. Random searches are allowed and advised.
-ALERT_RED_DOWNTO The station's destruction has been averted. There is still however an immediate serious threat to the station. Security may have weapons unholstered at all times, random searches are allowed and advised.
-ALERT_DELTA Destruction of the station is imminent. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill.
+ALERT_GREEN Все прямые и косвенные угрозы на борту нейтрализованы. Служба Безопасности может носить стандартное снаряжение. Носить оружие на виду запрещено. Законы о конфиденциальности и неприкосновеннсти частной жизни вновь работают в полную силу.
+ALERT_BLUE_UPTO Внимание! Командование получило достоверную информацию о возможной враждебной деятельности на борту корабля. Служба Безопасности может носить оружие и снаряжение на виду. Случайные обыски допускаются.
+ALERT_BLUE_DOWNTO Внимание. Прямая угроза миновала. Служба Безопасности больше не может быть в состоянии постоянной боевой готовности, однако разрешается видимое ношение оружия и снаряжения. Восстановлена работа судов. Случайные обыски по-прежнему разрешены. 
+ALERT_RED_UPTO Внимание! Существует прямая угроза работе корабля. Служба Безопасности может перейти в состояние постоянной боевой готовности. Работникам запрещается покидать свои отделы без уважительной причины. Судебные разбирательства приостановлены. Случайные обыски разрешены и рекомендованы.
+ALERT_RED_DOWNTO Внимание! Механизм самоуничтожения судна остановлен, однако все еще существует прямая угроза на борту. Служба Безопасности может оставаться в состоянии постоянной боевой готовности. Случайные обыски разрешены и рекомендованы.
+ALERT_DELTA Внимание! Механизм самоуничтожения судна запущен! Весь экипаж должен подчиняться приказам руководства корабля. Невыполнение приказов приведет к смертной казни на месте без суда и следствия. Это не учебная тревога. 
 
 
 
@@ -76,22 +76,22 @@ ALERT_DELTA Destruction of the station is imminent. All crew are instructed to o
 ## Default probablity is 1, increase to make that mode more likely to be picked.
 ## Set to 0 to disable that mode.
 
-PROBABILITY TRAITOR 5
-PROBABILITY TRAITORCHAN 4
+PROBABILITY TRAITOR 3
+PROBABILITY TRAITORCHAN 3
 PROBABILITY INTERNAL_AFFAIRS 3
-PROBABILITY NUCLEAR 2
-PROBABILITY REVOLUTION 2
-PROBABILITY GANG 2
-PROBABILITY CULT 2
-PROBABILITY CHANGELING 2
-PROBABILITY WIZARD 4
-PROBABILITY MALFUNCTION 1
-PROBABILITY BLOB 2
+PROBABILITY NUCLEAR 3
+PROBABILITY REVOLUTION 3
+PROBABILITY GANG 3
+PROBABILITY CULT 3
+PROBABILITY CHANGELING 3
+PROBABILITY WIZARD 3
+PROBABILITY MALFUNCTION 3
+PROBABILITY BLOB 3
 PROBABILITY MONKEY 0
 PROBABILITY METEOR 0
 PROBABILITY EXTENDED 0
-PROBABILITY DEVIL 0
-PROBABILITY DEVIL_AGENTS 0
+PROBABILITY DEVIL 1
+PROBABILITY DEVIL_AGENTS 1
 
 ## You probably want to keep sandbox off by default for secret and random.
 PROBABILITY SANDBOX 0
@@ -103,8 +103,8 @@ PROBABILITY SANDBOX 0
 CONTINUOUS TRAITOR
 CONTINUOUS TRAITORCHAN
 CONTINUOUS DOUBLE_AGENTS
-#CONTINUOUS NUCLEAR
-#CONTINUOUS REVOLUTION
+CONTINUOUS NUCLEAR
+CONTINUOUS REVOLUTION
 CONTINUOUS GANG
 CONTINUOUS CULT
 CONTINUOUS CLOCKWORK_CULT
@@ -222,7 +222,7 @@ TRAITOR_OBJECTIVES_AMOUNT 2
 #PROTECT_ASSISTANT_FROM_ANTAGONIST
 
 ## If non-human species are barred from joining as a head of staff
-#ENFORCE_HUMAN_AUTHORITY
+ENFORCE_HUMAN_AUTHORITY
 
 ## If late-joining players have a chance to become a traitor/changeling
 ALLOW_LATEJOIN_ANTAGONISTS
@@ -393,8 +393,11 @@ ROUNDSTART_RACES human
 
 ## Races that are strictly worse than humans that could probably be turned on without balance concerns
 ROUNDSTART_RACES lizard
+ROUNDSTART_RACES tajaran
+ROUNDSTART_RACES skrell
 #ROUNDSTART_RACES fly
 ROUNDSTART_RACES plasmaman
+ROUNDSTART_RACES originslime
 #ROUNDSTART_RACES shadow
 
 ## Races that are better than humans in some ways, but worse in others
@@ -420,7 +423,7 @@ ROUNDSTART_RACES plasmaman
 ##-------------------------------------------------------------------------------------------
 
 ## Uncomment to give players the choice of joining as a human with mutant bodyparts before they join the game
-#JOIN_WITH_MUTANT_HUMANS
+JOIN_WITH_MUTANT_HUMANS
 
 ## Assistant slot cap. Set to -1 for unlimited.
 ASSISTANT_CAP -1
@@ -443,9 +446,9 @@ MIDROUND_ANTAG_LIFE_CHECK 0.7
 ##Limit Spell Choices##
 ## Uncomment to disallow wizards from using certain spells that may be too chaotic/fun for your playerbase
 
-#NO_SUMMON_GUNS
-#NO_SUMMON_MAGIC
-#NO_SUMMON_EVENTS
+NO_SUMMON_GUNS
+NO_SUMMON_MAGIC
+NO_SUMMON_EVENTS
 
 ## Comment this out for "normal" explosions, which ignore obstacles
 ## Uncomment for explosions that react to doors and walls

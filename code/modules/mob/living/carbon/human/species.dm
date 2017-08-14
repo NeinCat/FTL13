@@ -445,6 +445,20 @@
 		else if ("tail_human" in mutant_bodyparts)
 			bodyparts_to_add -= "waggingtail_human"
 
+	if("tail_tajaran" in mutant_bodyparts)
+		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "tail_tajaran"
+
+	if("ears_tajaran" in mutant_bodyparts)
+		if((H.head && (H.head.flags_inv & HIDEHAIR)) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEHAIR)))
+			bodyparts_to_add -= "ears_tajaran"
+
+	if("waggingtail_tajaran" in mutant_bodyparts)
+		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "waggingtail_tajaran"
+		else if ("tail_tajaran" in mutant_bodyparts)
+			bodyparts_to_add -= "waggingtail_tajaran"
+
 	if("spines" in mutant_bodyparts)
 		if(!H.dna.features["spines"] || H.dna.features["spines"] == "None" || H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "spines"
@@ -524,6 +538,10 @@
 					S = GLOB.tails_list_human[H.dna.features["tail_human"]]
 				if("waggingtail_human")
 					S.= GLOB.animated_tails_list_human[H.dna.features["tail_human"]]
+				if("tail_tajaran")
+					S = GLOB.tails_list_tajaran[H.dna.features["tail_tajaran"]]
+				if("waggingtail_tajaran")
+					S. = GLOB.animated_tails_list_tajaran[H.dna.features["tail_tajaran"]]
 				if("spines")
 					S = GLOB.spines_list[H.dna.features["spines"]]
 				if("waggingspines")
@@ -536,6 +554,8 @@
 					S = GLOB.horns_list[H.dna.features["horns"]]
 				if("ears")
 					S = GLOB.ears_list[H.dna.features["ears"]]
+				if("ears_tajaran")
+					S = GLOB.ears_tajaran_list[H.dna.features["ears_tajaran"]]
 				if("body_markings")
 					S = GLOB.body_markings_list[H.dna.features["body_markings"]]
 				if("wings")
@@ -551,9 +571,11 @@
 			var/mutable_appearance/accessory_overlay = mutable_appearance(S.icon, layer = -layer)
 
 			//A little rename so we don't have to use tail_lizard or tail_human when naming the sprites.
-			if(bodypart == "tail_lizard" || bodypart == "tail_human")
+			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_tajaran")
 				bodypart = "tail"
-			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human")
+			if(bodypart == "ears_tajaran")
+				bodypart = "ears"
+			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human" || bodypart == "waggingtail_tajaran")
 				bodypart = "waggingtail"
 
 			if(S.gender_specific)

@@ -333,6 +333,40 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "<a href='?_src_=prefs;preference=legs;task=input'>[features["legs"]]</a><BR>"
 
 					dat += "</td>"
+
+				if("skrell_hair" in pref_species.mutant_bodyparts)
+
+					dat += "<td valign='top' width='21%'>"
+
+					dat += "<h3>Skrell Hair Style</h3>"
+
+					dat += "<a href='?_src_=prefs;preference=shair_style;task=input'>[features["skrell_hair"]]</a><BR>"
+					dat += "<a href='?_src_=prefs;preference=previous_shair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_shair_style;task=input'>&gt;</a><BR>"
+					dat += "<span style='border:1px solid #161616; background-color: #[hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=hair;task=input'>Change</a><BR>"
+
+
+				if("tail_tajaran" in pref_species.mutant_bodyparts)
+					dat += "<h3>Tail</h3>"
+					dat += "<a href='?_src_=prefs;preference=tail_tajaran;task=input'>[features["tail_tajaran"]]</a><BR>"
+
+				if("ears_tajaran" in pref_species.mutant_bodyparts)
+					dat += "<td valign='top' width='7%'>"
+
+					dat += "<h3>Ears</h3>"
+
+					dat += "<a href='?_src_=prefs;preference=ears_tajaran;task=input'>[features["ears_tajaran"]]</a><BR>"
+
+					dat += "</td>"
+
+				if("tajaran_hair" in pref_species.mutant_bodyparts)
+
+					dat += "<td valign='top' width='21%'>"
+
+					dat += "<h3>Tajaran Hair Style</h3>"
+
+					dat += "<a href='?_src_=prefs;preference=thair_style;task=input'>[features["tajaran_hair"]]</a><BR>"
+					dat += "<a href='?_src_=prefs;preference=previous_thair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_thair_style;task=input'>&gt;</a><BR>"
+					dat += "<span style='border:1px solid #161616; background-color: #[hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=hair;task=input'>Change</a><BR>"
 			if(config.mutant_humans)
 
 				if("tail_human" in pref_species.mutant_bodyparts)
@@ -1014,6 +1048,19 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					new_tail = input(user, "Choose your character's tail:", "Character Preference") as null|anything in GLOB.tails_list_human
 					if(new_tail)
 						features["tail_human"] = new_tail
+
+				if("tail_tajaran")
+					var/new_tail
+					new_tail = input(user, "Choose your character's tail:", "Character Preference") as null|anything in GLOB.tails_list_tajaran
+					if(new_tail)
+						features["tail_tajaran"] = new_tail
+
+				if("ears_tajaran")
+					var/new_ears
+					new_ears = input(user, "Choose your character's ears:", "Character Preference") as null|anything in GLOB.ears_tajaran_list
+					if(new_ears)
+						features["ears_tajaran"] = new_ears
+
 
 				if("snout")
 					var/new_snout

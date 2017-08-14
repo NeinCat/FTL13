@@ -1,6 +1,8 @@
 //Preferences stuff
 	//Hairstyles
 GLOBAL_LIST_EMPTY(hair_styles_list)			//stores /datum/sprite_accessory/hair indexed by name
+GLOBAL_LIST_EMPTY(hair_styles_tajaran_list)        //TAJARAN
+GLOBAL_LIST_EMPTY(hair_styles_skrell_list)        //SKRELL
 GLOBAL_LIST_EMPTY(hair_styles_male_list)		//stores only hair names
 GLOBAL_LIST_EMPTY(hair_styles_female_list)	//stores only hair names
 GLOBAL_LIST_EMPTY(facial_hair_styles_list)	//stores /datum/sprite_accessory/facial_hair indexed by name
@@ -19,10 +21,13 @@ GLOBAL_LIST_EMPTY(socks_list)		//stores /datum/sprite_accessory/socks indexed by
 	//Lizard Bits (all datum lists indexed by name)
 GLOBAL_LIST_EMPTY(body_markings_list)
 GLOBAL_LIST_EMPTY(tails_list_lizard)
+GLOBAL_LIST_EMPTY(tails_list_tajaran)
+GLOBAL_LIST_EMPTY(animated_tails_list_tajaran)
 GLOBAL_LIST_EMPTY(animated_tails_list_lizard)
 GLOBAL_LIST_EMPTY(snouts_list)
 GLOBAL_LIST_EMPTY(horns_list)
 GLOBAL_LIST_EMPTY(frills_list)
+GLOBAL_LIST_EMPTY(ears_tajaran_list)
 GLOBAL_LIST_EMPTY(spines_list)
 GLOBAL_LIST_EMPTY(legs_list)
 GLOBAL_LIST_EMPTY(animated_spines_list)
@@ -39,6 +44,7 @@ GLOBAL_LIST_INIT(ghost_forms_with_directions_list, list("ghost")) //stores the g
 GLOBAL_LIST_INIT(ghost_forms_with_accessories_list, list("ghost")) //stores the ghost forms that support hair and other such things
 
 GLOBAL_LIST_INIT(security_depts_prefs, list(SEC_DEPT_RANDOM, SEC_DEPT_NONE, SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, SEC_DEPT_SCIENCE, SEC_DEPT_SUPPLY))
+
 
 	//Backpacks
 #define GBACKPACK "Grey Backpack"
