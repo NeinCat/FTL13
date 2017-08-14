@@ -7,7 +7,7 @@
 /mob/living/silicon/ai/compose_track_href(atom/movable/speaker, namepart)
 	var/mob/M = speaker.GetSource()
 	if(M)
-		return "<a href='?src=\ref[src];track=[html_encode(namepart)]'>"
+		return "<a href='?src=\ref[src];track=[rhtml_encode(namepart)]'>"
 	return ""
 
 /mob/living/silicon/ai/compose_job(atom/movable/speaker, message_langs, raw_message, radio_freq)
@@ -137,7 +137,7 @@
 	for(var/word in words)
 		play_vox_word(word, src.z, null)
 /*
-	for(var/mob/M in GLOB.player_list)
+	for(var/mob/M in player_list)
 		if(M.client)
 			var/turf/T = get_turf(M)
 			var/turf/our_turf = get_turf(src)

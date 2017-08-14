@@ -611,3 +611,22 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 	. = base
 	if(rest)
 		. += .(rest)
+
+/proc/strip_html_properly(var/input,var/max_length=MAX_MESSAGE_LEN)
+	if(!input)
+		return
+	var/opentag = 1
+	var/closetag = 1
+	while(1)
+		opentag = findtext(input, "<", opentag) //These store the position of < and > respectively.
+		if(opentag)
+			closetag = findtext(input, ">", opentag)
+			if(closetag)
+				input = copytext(input, 1, opentag) + copytext(input, closetag + 1)
+			else
+				break
+		else
+			break
+	if(max_length)
+		input = copytext(input,1,max_length)
+	return input
