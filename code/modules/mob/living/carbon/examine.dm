@@ -83,7 +83,8 @@
 		if(digitalcamo)
 			msg += "[t_He] [t_is] moving [t_his] body in an unnatural and blatantly unsimian manner.\n"
 
-
+	if(print_flavor_text())
+		msg += "[print_flavor_text()]\n"
 
 	msg += "*---------*</span>"
 

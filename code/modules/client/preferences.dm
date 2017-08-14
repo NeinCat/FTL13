@@ -96,6 +96,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	// 0 = character settings, 1 = game preferences
 	var/current_tab = 0
 
+	var/flavor_text = ""
+
 		// OOC Metadata:
 	var/metadata = ""
 
@@ -1312,6 +1314,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if (href_list["tab"])
 						current_tab = text2num(href_list["tab"])
 
+				if("set_char_notes")
+					set_char_notes(user)
+
+				if("flavor_text")
+					flavor_text = stripped_multiline_input(usr, "Введите описание персонажа", "Set Flavor Text", copytext(sanitize_russian(flavor_text), 1, MAX_MESSAGE_LEN))
+					set_char_notes(user)
+
+
 	ShowChoices(user)
 	return 1
 
@@ -1355,6 +1365,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.backbag = backbag
 
 	character.dna.features = features.Copy()
+	character.flavor_text = sanitize_russian(flavor_text)
 	character.dna.real_name = character.real_name
 	var/datum/species/chosen_species
 	if(pref_species != /datum/species/human && config.mutant_races)
@@ -1367,3 +1378,21 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		character.update_body()
 		character.update_hair()
 		character.update_body_parts()
+
+/datum/preferences/proc/set_char_notes(user)
+	if(jobban_isbanned(user, "appearance"))
+		return
+
+	var/dat = ""
+
+	dat += "<BR><a href='?_src_=prefs;preference=flavor_text'><b>Flavor Text:</b></a><BR>"
+	if(lentext(copytext(sanitize_russian(flavor_text), 1, MAX_MESSAGE_LEN)) <= 400)
+		dat += "[copytext(sanitize_russian(flavor_text), 1, MAX_MESSAGE_LEN)]<BR>"
+	else
+		dat += "[copytext(sanitize_russian(flavor_text), 1, 400)]... <a href='?_src_=prefs;preference=flavor_text_more'>More...</a><BR>"
+
+	user << browse(null, "window=char_notes")
+	var/datum/browser/popup = new(user, "mob_notes", "<div align='center'>[real_name] Notes</div>", 400, 600)
+	popup.set_content(dat)
+	popup.open(0)
+	return 1
