@@ -422,6 +422,17 @@ def parse_map(map_raw_text): #still does not support more than one z level per f
                         if curr_x > maxx:
                             maxx = curr_x
                         iter_x = 0
+                        curr_num = ""
+                        reading_coord = "y"
+                    elif reading_coord == "y":
+                        curr_y = string_to_num(curr_num)
+                        if curr_y > maxy:
+                            maxy = curr_y
+                        curr_num = ""
+                        reading_coord = "z"
+                    else:
+                        pass
+                    continue
 
                 if char == ")":
                     in_coord_block = False

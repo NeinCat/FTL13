@@ -241,6 +241,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "locker"
 
 /area/shuttle/ftl/crew_quarters/sleep
+	name = "Cryogenic Storage"
+	icon_state = "Sleep"
+
+/area/shuttle/ftl/crew_quarters/dorm
 	name = "Dormitories"
 	icon_state = "Sleep"
 
