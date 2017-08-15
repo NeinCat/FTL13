@@ -11673,8 +11673,6 @@
 /turf/open/floor/plasteel,
 /area/shuttle/ftl/engine/engineering)
 "va" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile,
 /obj/machinery/door/poddoor/preopen{
 	id = "Engineering";
 	name = "engineering security door"
@@ -11685,6 +11683,8 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/shuttle/ftl/engine/engineering)
 "vb" = (
@@ -11712,10 +11712,6 @@
 /turf/open/floor/engine,
 /area/shuttle/ftl/engine/engineering)
 "vd" = (
-/obj/machinery/light{
-	dir = 2;
-	icon_state = "tube1"
-	},
 /obj/structure/cable{
 	d2 = 8;
 	icon_state = "0-8"
@@ -13816,10 +13812,6 @@
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister/toxins,
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
-	},
 /turf/open/floor/plasteel/darkwarning/corner{
 	tag = "icon-black_warn_corner (WEST)";
 	icon_state = "black_warn_corner";
@@ -14505,10 +14497,10 @@
 	id = "Engineering";
 	name = "engineering security door"
 	},
-/obj/machinery/door/airlock/glass_engineering{
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/engineering{
 	name = "Gravity Generator";
-	req_access_txt = "34";
-	req_one_access_txt = "0"
+	req_access_txt = "10"
 	},
 /turf/open/floor/plasteel/black,
 /area/shuttle/ftl/engine/engineering)
@@ -25390,29 +25382,63 @@
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
 "Ux" = (
-/turf/closed/wall/r_wall,
-/area/shuttle/ftl/space)
+/obj/machinery/door/poddoor/preopen{
+	id = "Engineering";
+	name = "engineering security door"
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/engineering{
+	name = "FTL - Shield Generator Room";
+	req_access_txt = "10"
+	},
+/turf/open/floor/plasteel/black,
+/area/shuttle/ftl/engine/engineering)
 "Uy" = (
-/turf/closed/wall/r_wall,
-/area/shuttle/ftl/space)
+/turf/open/floor/plasteel/darkwarning/corner{
+	tag = "icon-black_warn_corner (WEST)";
+	icon_state = "black_warn_corner";
+	dir = 8
+	},
+/area/shuttle/ftl/engine/engineering)
 "Uz" = (
-/turf/closed/wall/r_wall,
-/area/shuttle/ftl/space)
+/turf/open/floor/plasteel/darkwarning/corner{
+	tag = "icon-black_warn_corner (EAST)";
+	icon_state = "black_warn_corner";
+	dir = 4
+	},
+/area/shuttle/ftl/engine/engineering)
 "UA" = (
-/obj/structure/window/reinforced{
-	dir = 4
+/obj/machinery/door/poddoor/preopen{
+	id = "Engineering";
+	name = "engineering security door"
 	},
-/turf/open/floor/plating,
-/area/shuttle/ftl/space)
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/engineering{
+	name = "FTL - Shield Generator Room";
+	req_access_txt = "10"
+	},
+/turf/open/floor/plasteel/black,
+/area/shuttle/ftl/engine/engineering)
 "UB" = (
-/obj/structure/window/reinforced{
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/power/apc/ship{
+	auto_name = 1;
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/turf/open/floor/plasteel,
+/area/shuttle/ftl/engine/engineering)
+"UC" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/open/floor/plasteel/darkwarning{
 	dir = 4
 	},
-/turf/open/floor/plating,
-/area/shuttle/ftl/space)
-"UC" = (
-/turf/closed/wall/r_wall,
-/area/shuttle/ftl/space)
+/area/shuttle/ftl/engine/engineering)
 "UD" = (
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
@@ -25423,66 +25449,96 @@
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
 "UG" = (
-/obj/structure/shuttle/engine/propulsion/left{
-	tag = "icon-propulsion_l (WEST)";
-	icon_state = "propulsion_l";
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
 	},
-/turf/open/space,
-/area/shuttle/ftl/space)
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/engine/engineering)
 "UH" = (
-/obj/structure/shuttle/engine/heater{
-	icon_state = "heater";
-	dir = 8
-	},
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /turf/open/floor/plating,
 /area/shuttle/ftl/space)
 "UI" = (
-/obj/structure/shuttle/engine/propulsion/left{
-	tag = "icon-propulsion_l (WEST)";
-	icon_state = "propulsion_l";
-	dir = 8
+/obj/structure/window/reinforced{
+	dir = 4
 	},
-/turf/open/space,
+/turf/open/floor/plating,
 /area/shuttle/ftl/space)
 "UJ" = (
-/obj/structure/shuttle/engine/heater{
-	icon_state = "heater";
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/open/floor/plating,
+/turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
 "UK" = (
-/obj/structure/shuttle/engine/propulsion/left{
-	tag = "icon-propulsion_l (WEST)";
-	icon_state = "propulsion_l";
-	dir = 8
-	},
-/turf/open/space,
+/turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
 "UL" = (
-/obj/structure/shuttle/engine/heater{
-	icon_state = "heater";
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/open/floor/plating,
+/turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
 "UM" = (
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
 "UN" = (
-/turf/closed/wall/r_wall,
+/obj/structure/shuttle/engine/propulsion/left{
+	tag = "icon-propulsion_l (WEST)";
+	icon_state = "propulsion_l";
+	dir = 8
+	},
+/turf/open/space,
 /area/shuttle/ftl/space)
 "UO" = (
+/obj/structure/shuttle/engine/heater{
+	icon_state = "heater";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/ftl/space)
+"UP" = (
+/obj/structure/shuttle/engine/propulsion/left{
+	tag = "icon-propulsion_l (WEST)";
+	icon_state = "propulsion_l";
+	dir = 8
+	},
+/turf/open/space,
+/area/shuttle/ftl/space)
+"UQ" = (
+/obj/structure/shuttle/engine/heater{
+	icon_state = "heater";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/ftl/space)
+"UR" = (
+/obj/structure/shuttle/engine/propulsion/left{
+	tag = "icon-propulsion_l (WEST)";
+	icon_state = "propulsion_l";
+	dir = 8
+	},
+/turf/open/space,
+/area/shuttle/ftl/space)
+"US" = (
+/obj/structure/shuttle/engine/heater{
+	icon_state = "heater";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/ftl/space)
+"UT" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"UU" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"UV" = (
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
 
@@ -44742,29 +44798,29 @@ ab
 ab
 ab
 ab
-Uy
-ab
-sc
-ab
-sc
-ab
-sc
-ab
-sc
-UC
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
 UE
-UG
-UI
-UK
-UM
+ab
+sc
+ab
+sc
+ab
+sc
+ab
+sc
+UJ
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+UL
+UN
+UP
+UR
+UT
 ab
 ab
 ab
@@ -44996,17 +45052,17 @@ ab
 ab
 ab
 ab
-Ux
-Uz
-UA
-ql
-ql
-ql
-ql
-ql
-ql
-UB
 UD
+UF
+UH
+ql
+ql
+ql
+ql
+ql
+ql
+UI
+UK
 mq
 Hd
 mq
@@ -45015,12 +45071,12 @@ ab
 ab
 ab
 ab
-UF
-UH
-UJ
-UL
-UN
+UM
 UO
+UQ
+US
+UU
+UV
 ab
 ab
 ab
@@ -48051,7 +48107,7 @@ tN
 us
 uY
 vB
-uY
+qx
 wE
 xp
 tn
@@ -48303,12 +48359,12 @@ sj
 sL
 to
 tO
-ut
-uZ
 vC
-wa
-wF
+uZ
 ut
+ut
+wF
+UB
 yc
 yO
 zs
@@ -48558,18 +48614,18 @@ sk
 sM
 sM
 tP
-uu
+sM
 va
-sM
-sM
+Ux
+UA
 tP
-xq
+sM
 yd
 yP
 sM
-tP
+UG
 Ah
-yd
+sM
 Bk
 Bk
 CG
@@ -48815,10 +48871,10 @@ tp
 tQ
 uv
 vb
-sM
+Uy
 wb
 tQ
-uv
+UC
 ye
 yQ
 sM
@@ -49070,8 +49126,8 @@ tq
 tR
 tR
 vc
-sM
-wc
+yT
+tq
 tR
 tR
 yf
@@ -49325,7 +49381,7 @@ tq
 tR
 uw
 vd
-sM
+yT
 tq
 tR
 xr
@@ -49580,7 +49636,7 @@ tq
 tR
 tR
 ve
-sM
+yT
 tq
 tR
 tR
@@ -49835,7 +49891,7 @@ tr
 tS
 ux
 vf
-sM
+Uz
 tr
 tS
 xs
