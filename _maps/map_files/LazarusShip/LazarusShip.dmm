@@ -9111,7 +9111,10 @@
 /turf/open/floor/plating,
 /area/shuttle/ftl/storage/tech)
 "ql" = (
-/turf/open/space,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
 /area/shuttle/ftl/engine/engine_smes)
 "qm" = (
 /obj/structure/shuttle/engine/heater{
@@ -10127,7 +10130,7 @@
 /turf/open/floor/plating,
 /area/shuttle/ftl/storage/tech)
 "sc" = (
-/obj/machinery/thruster{
+/obj/structure/shuttle/engine/large{
 	dir = 8
 	},
 /turf/open/space,
@@ -15052,7 +15055,6 @@
 	id = "Engineering";
 	name = "engineering security door"
 	},
-/obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/atmos{
 	name = "Atmospherics";
 	req_access_txt = "24"
@@ -18419,12 +18421,10 @@
 /turf/open/floor/plating,
 /area/shuttle/ftl/maintenance/engineering)
 "He" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/closed/wall/r_wall,
 /area/shuttle/ftl/atmos)
 "Hf" = (
 /obj/structure/disposalpipe/segment{
@@ -25273,6 +25273,218 @@
 /obj/structure/window/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/shuttle/ftl/crew_quarters/bar)
+"Uc" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"Ud" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"Ue" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"Uf" = (
+/obj/structure/shuttle/engine/propulsion/left{
+	tag = "icon-propulsion_l (WEST)";
+	icon_state = "propulsion_l";
+	dir = 8
+	},
+/turf/open/space,
+/area/shuttle/ftl/space)
+"Ug" = (
+/obj/structure/shuttle/engine/heater{
+	icon_state = "heater";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/ftl/space)
+"Uh" = (
+/obj/structure/shuttle/engine/propulsion/left{
+	tag = "icon-propulsion_l (WEST)";
+	icon_state = "propulsion_l";
+	dir = 8
+	},
+/turf/open/space,
+/area/shuttle/ftl/space)
+"Ui" = (
+/obj/structure/shuttle/engine/heater{
+	icon_state = "heater";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/ftl/space)
+"Uj" = (
+/obj/structure/shuttle/engine/propulsion/left{
+	tag = "icon-propulsion_l (WEST)";
+	icon_state = "propulsion_l";
+	dir = 8
+	},
+/turf/open/space,
+/area/shuttle/ftl/space)
+"Uk" = (
+/obj/structure/shuttle/engine/heater{
+	icon_state = "heater";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/ftl/space)
+"Ul" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"Um" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"Un" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"Uo" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"Up" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/ftl/space)
+"Uq" = (
+/obj/structure/shuttle/engine/large{
+	dir = 8
+	},
+/turf/open/space,
+/area/shuttle/ftl/space)
+"Ur" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/shuttle/ftl/engine/engine_smes)
+"Us" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/ftl/space)
+"Ut" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/turf/open/floor/plasteel,
+/area/shuttle/ftl/engine/engine_smes)
+"Uu" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"Uv" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"Uw" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"Ux" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"Uy" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"Uz" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"UA" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/ftl/space)
+"UB" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/ftl/space)
+"UC" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"UD" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"UE" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"UF" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"UG" = (
+/obj/structure/shuttle/engine/propulsion/left{
+	tag = "icon-propulsion_l (WEST)";
+	icon_state = "propulsion_l";
+	dir = 8
+	},
+/turf/open/space,
+/area/shuttle/ftl/space)
+"UH" = (
+/obj/structure/shuttle/engine/heater{
+	icon_state = "heater";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/ftl/space)
+"UI" = (
+/obj/structure/shuttle/engine/propulsion/left{
+	tag = "icon-propulsion_l (WEST)";
+	icon_state = "propulsion_l";
+	dir = 8
+	},
+/turf/open/space,
+/area/shuttle/ftl/space)
+"UJ" = (
+/obj/structure/shuttle/engine/heater{
+	icon_state = "heater";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/ftl/space)
+"UK" = (
+/obj/structure/shuttle/engine/propulsion/left{
+	tag = "icon-propulsion_l (WEST)";
+	icon_state = "propulsion_l";
+	dir = 8
+	},
+/turf/open/space,
+/area/shuttle/ftl/space)
+"UL" = (
+/obj/structure/shuttle/engine/heater{
+	icon_state = "heater";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/ftl/space)
+"UM" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"UN" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"UO" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
 
 (1,1,1) = {"
 aa
@@ -44015,7 +44227,7 @@ ab
 ab
 ab
 ab
-ab
+ac
 ab
 ab
 ab
@@ -44274,7 +44486,7 @@ ab
 ab
 ab
 ab
-ac
+ab
 ab
 ab
 ab
@@ -44500,11 +44712,11 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
+Ud
+Uf
+Uh
+Uj
+Ul
 ab
 ab
 ab
@@ -44513,15 +44725,16 @@ ab
 mq
 nh
 mq
+Un
 ab
-ab
-ab
-ab
-sc
-ab
+Uq
 ab
 sc
 ab
+sc
+ab
+sc
+Uu
 ab
 ab
 ab
@@ -44529,16 +44742,16 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
+Uy
 ab
 sc
 ab
+sc
 ab
 sc
 ab
+sc
+UC
 ab
 ab
 ab
@@ -44547,12 +44760,11 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
-ab
+UE
+UG
+UI
+UK
+UM
 ab
 ab
 ab
@@ -44754,12 +44966,12 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
-ab
+Uc
+Ue
+Ug
+Ui
+Uk
+Um
 ab
 ab
 ab
@@ -44768,33 +44980,33 @@ ab
 mq
 ni
 mq
-ab
-ab
+Uo
+Up
 ql
 ql
 ql
 ql
 ql
 ql
+Us
+Uv
+Uw
 ab
 ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
-ab
+Ux
+Uz
+UA
 ql
 ql
 ql
 ql
 ql
 ql
-ab
-ab
+UB
+UD
 mq
 Hd
 mq
@@ -44803,12 +45015,12 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
-ab
+UF
+UH
+UJ
+UL
+UN
+UO
 ab
 ab
 ab
@@ -45010,27 +45222,27 @@ ab
 ab
 ag
 ag
-bK
-bK
+ag
+ag
 ag
 fu
-fv
-fv
-fv
 fu
-kJ
-kJ
+fu
+fu
+fu
+jY
+jY
 jY
 nj
-kJ
 jY
 jY
-qm
-qm
-qm
-qm
-qm
-qm
+jY
+qn
+qn
+qn
+qn
+qn
+qn
 qn
 qn
 qn
@@ -45042,28 +45254,28 @@ vR
 vR
 vR
 qn
-qm
-qm
-qm
-qm
-qm
-qm
+qn
+qn
+qn
+qn
+qn
+qn
 Bk
 Bk
-Ej
+Bk
 He
-Ej
+Bk
 IR
-JP
-JP
+IR
+IR
 Ll
-Ns
-Ox
-Pt
 Ll
-Ns
-Ox
-Pt
+Ll
+Ll
+Ll
+Ll
+Ll
+Ll
 Ll
 ab
 ab
@@ -45280,13 +45492,13 @@ nk
 lO
 oX
 jY
-qn
-qn
-qn
-qn
-qn
-qn
-uk
+ql
+ql
+ql
+ql
+ql
+Ur
+Ut
 uQ
 vu
 vS
