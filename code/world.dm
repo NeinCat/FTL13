@@ -260,12 +260,10 @@
 
 	if (config && config.server_name)
 		s += "<b>[config.server_name]</b> &#8212; "
-
-	s += "<b><span style='font-size:8px'>[station_name()]</span></b>";
 	s += " ("
 	s += "<a href=\"http://redlazarus.com\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
-	s += "redlazarus.com"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "Forums"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
 
@@ -281,6 +279,7 @@
 		features += "closed"
 
 	features += GLOB.abandon_allowed ? "respawn" : "no respawn"
+	features += "FTL13"
 
 	if (config && config.allow_vote_mode)
 		features += "vote"
@@ -298,8 +297,7 @@
 	else if (n > 0)
 		features += "~[n] player"
 
-	if (!host && config && config.hostedby)
-		features += "hosted by <b>ExecutiveCancer</b>"
+	features += "hosted by <b>ExecutiveCancer</b>"
 
 	if (features)
 		s += ": [jointext(features, ", ")]"

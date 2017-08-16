@@ -13403,6 +13403,11 @@
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 10
 	},
+/obj/machinery/camera/autoname{
+	tag = "icon-camera (NORTHWEST)";
+	icon_state = "camera";
+	dir = 9
+	},
 /turf/open/floor/plasteel/darkwarning{
 	tag = "icon-black_warn (WEST)";
 	icon_state = "black_warn";
@@ -24842,9 +24847,6 @@
 /area/shuttle/ftl/crew_quarters/dorm)
 "Ts" = (
 /obj/structure/dresser,
-/obj/machinery/light_switch{
-	pixel_x = 28
-	},
 /turf/open/floor/carpet,
 /area/shuttle/ftl/crew_quarters/dorm)
 "Tt" = (
@@ -24889,9 +24891,6 @@
 	icon_state = "1-4"
 	},
 /obj/structure/dresser,
-/obj/machinery/light_switch{
-	pixel_x = 28
-	},
 /turf/open/floor/carpet,
 /area/shuttle/ftl/crew_quarters/dorm)
 "Tw" = (
@@ -25375,21 +25374,30 @@
 /turf/open/floor/plating,
 /area/shuttle/ftl/engine/engine_smes)
 "Ut" = (
+/obj/machinery/camera/autoname{
+	tag = "icon-camera (NORTHWEST)";
+	icon_state = "camera";
+	dir = 9
+	},
+/turf/open/floor/plasteel/darkwarning{
+	tag = "icon-black_warn (WEST)";
+	icon_state = "black_warn";
+	dir = 8
+	},
+/area/shuttle/ftl/engine/engineering)
+"Uu" = (
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /turf/open/floor/plating,
 /area/shuttle/ftl/space)
-"Uu" = (
+"Uv" = (
 /obj/structure/window/reinforced{
 	dir = 1;
 	layer = 2.9
 	},
 /turf/open/floor/plasteel,
 /area/shuttle/ftl/engine/engine_smes)
-"Uv" = (
-/turf/closed/wall/r_wall,
-/area/shuttle/ftl/space)
 "Uw" = (
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
@@ -25397,6 +25405,9 @@
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
 "Uy" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"Uz" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "Engineering";
 	name = "engineering security door"
@@ -25408,21 +25419,21 @@
 	},
 /turf/open/floor/plasteel/black,
 /area/shuttle/ftl/engine/engineering)
-"Uz" = (
+"UA" = (
 /turf/open/floor/plasteel/darkwarning/corner{
 	tag = "icon-black_warn_corner (WEST)";
 	icon_state = "black_warn_corner";
 	dir = 8
 	},
 /area/shuttle/ftl/engine/engineering)
-"UA" = (
+"UB" = (
 /turf/open/floor/plasteel/darkwarning/corner{
 	tag = "icon-black_warn_corner (EAST)";
 	icon_state = "black_warn_corner";
 	dir = 4
 	},
 /area/shuttle/ftl/engine/engineering)
-"UB" = (
+"UC" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "Engineering";
 	name = "engineering security door"
@@ -25434,7 +25445,7 @@
 	},
 /turf/open/floor/plasteel/black,
 /area/shuttle/ftl/engine/engineering)
-"UC" = (
+"UD" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/power/apc/ship{
@@ -25449,7 +25460,7 @@
 	},
 /turf/open/floor/plasteel,
 /area/shuttle/ftl/engine/engineering)
-"UD" = (
+"UE" = (
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -24
@@ -25458,9 +25469,6 @@
 	dir = 4
 	},
 /area/shuttle/ftl/engine/engineering)
-"UE" = (
-/turf/closed/wall/r_wall,
-/area/shuttle/ftl/space)
 "UF" = (
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
@@ -25468,17 +25476,14 @@
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
 "UH" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"UI" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/engine/engineering)
-"UI" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/shuttle/ftl/space)
 "UJ" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -25486,7 +25491,10 @@
 /turf/open/floor/plating,
 /area/shuttle/ftl/space)
 "UK" = (
-/turf/closed/wall/r_wall,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
 /area/shuttle/ftl/space)
 "UL" = (
 /turf/closed/wall/r_wall,
@@ -25501,42 +25509,27 @@
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
 "UP" = (
-/obj/structure/shuttle/engine/propulsion/left{
-	tag = "icon-propulsion_l (WEST)";
-	icon_state = "propulsion_l";
-	dir = 8
-	},
-/turf/open/space,
+/turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
 "UQ" = (
-/obj/structure/shuttle/engine/heater{
-	icon_state = "heater";
+/obj/structure/shuttle/engine/propulsion/left{
+	tag = "icon-propulsion_l (WEST)";
+	icon_state = "propulsion_l";
 	dir = 8
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/open/floor/plating,
+/turf/open/space,
 /area/shuttle/ftl/space)
 "UR" = (
-/obj/structure/shuttle/engine/propulsion/left{
-	tag = "icon-propulsion_l (WEST)";
-	icon_state = "propulsion_l";
+/obj/structure/shuttle/engine/heater{
+	icon_state = "heater";
 	dir = 8
 	},
-/turf/open/space,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
 /area/shuttle/ftl/space)
 "US" = (
-/obj/structure/shuttle/engine/heater{
-	icon_state = "heater";
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/shuttle/ftl/space)
-"UT" = (
 /obj/structure/shuttle/engine/propulsion/left{
 	tag = "icon-propulsion_l (WEST)";
 	icon_state = "propulsion_l";
@@ -25544,7 +25537,7 @@
 	},
 /turf/open/space,
 /area/shuttle/ftl/space)
-"UU" = (
+"UT" = (
 /obj/structure/shuttle/engine/heater{
 	icon_state = "heater";
 	dir = 8
@@ -25554,13 +25547,31 @@
 	},
 /turf/open/floor/plating,
 /area/shuttle/ftl/space)
+"UU" = (
+/obj/structure/shuttle/engine/propulsion/left{
+	tag = "icon-propulsion_l (WEST)";
+	icon_state = "propulsion_l";
+	dir = 8
+	},
+/turf/open/space,
+/area/shuttle/ftl/space)
 "UV" = (
-/turf/closed/wall/r_wall,
+/obj/structure/shuttle/engine/heater{
+	icon_state = "heater";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
 /area/shuttle/ftl/space)
 "UW" = (
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
 "UX" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/ftl/space)
+"UY" = (
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/space)
 
@@ -44812,7 +44823,7 @@ ab
 sc
 ab
 sc
-Uv
+Uw
 ab
 ab
 ab
@@ -44820,16 +44831,16 @@ ab
 ab
 ab
 ab
-UF
-ab
-sc
+UG
 ab
 sc
 ab
 sc
 ab
 sc
-UK
+ab
+sc
+UL
 ab
 ab
 ab
@@ -44838,11 +44849,11 @@ ab
 ab
 ab
 ab
-UN
-UP
-UR
-UT
-UV
+UO
+UQ
+US
+UU
+UW
 ab
 ab
 ab
@@ -45066,25 +45077,25 @@ ql
 ql
 ql
 ql
-Ut
-Uw
+Uu
 Ux
+Uy
 ab
 ab
 ab
 ab
 ab
-UE
-UG
-UI
-ql
-ql
-ql
-ql
-ql
-ql
+UF
+UH
 UJ
-UL
+ql
+ql
+ql
+ql
+ql
+ql
+UK
+UM
 mq
 Hd
 mq
@@ -45092,13 +45103,13 @@ ab
 ab
 ab
 ab
-UM
-UO
-UQ
-US
-UU
-UW
+UN
+UP
+UR
+UT
+UV
 UX
+UY
 ab
 ab
 ab
@@ -45576,7 +45587,7 @@ ql
 ql
 ql
 Us
-Uu
+Uv
 uQ
 vu
 vS
@@ -48386,7 +48397,7 @@ uZ
 ut
 ut
 wF
-UC
+UD
 yc
 yO
 zs
@@ -48638,14 +48649,14 @@ sM
 tP
 sM
 va
-Uy
-UB
+Uz
+UC
 tP
 sM
 yd
 yP
 sM
-UH
+UI
 Ah
 sM
 Bk
@@ -48893,10 +48904,10 @@ tp
 tQ
 uv
 vb
-Uz
+UA
 wb
 tQ
-UD
+UE
 ye
 yQ
 sM
@@ -49910,10 +49921,10 @@ ru
 sl
 sM
 tr
-tS
+Ut
 ux
 vf
-UA
+UB
 tr
 tS
 xs
