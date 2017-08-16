@@ -1,0 +1,5 @@
+neincat role=admin
+cryptman role=admin
+redknighthero role=admin
+joctopus role=admin
+executivecancer role=admin
