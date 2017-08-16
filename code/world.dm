@@ -7,8 +7,9 @@
 	view = "15x15"
 	cache_lifespan = 7
 	hub = "Exadv1.spacestation13"
-	name = "FTL13"
+	name = "NRV Lazarus - RUS"
 	fps = 20
+	visibility = 1
 #ifdef GC_FAILURE_HARD_LOOKUP
 	loop_checks = FALSE
 #endif
@@ -262,9 +263,9 @@
 
 	s += "<b><span style='font-size:8px'>[station_name()]</span></b>";
 	s += " ("
-	s += "<a href=\"http://ftl13.com\">" //Change this to wherever you want the hub to link to.
+	s += "<a href=\"http://redlazarus.com\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
-	s += "ftl13.com"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "redlazarus.com"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
 
@@ -298,7 +299,7 @@
 		features += "~[n] player"
 
 	if (!host && config && config.hostedby)
-		features += "hosted by <b>[config.hostedby]</b>"
+		features += "hosted by <b>ExecutiveCancer</b>"
 
 	if (features)
 		s += ": [jointext(features, ", ")]"
@@ -312,4 +313,4 @@
 	if(GLOB.hub_visibility)
 		hub_password = "kMZy3U5jJHSiBQjr"
 	else
-		hub_password = "SORRYNOPASSWORD"
+		hub_password = "kMZy3U5jJHSiBQjr"
