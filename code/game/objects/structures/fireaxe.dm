@@ -4,11 +4,12 @@
 	var/obj/item/weapon/twohanded/fireaxe/fireaxe = new/obj/item/weapon/twohanded/fireaxe
 	icon = 'icons/obj/wallmounts.dmi'
 	icon_state = "fireaxe"
-	anchored = TRUE
-	density = FALSE
+	anchored = 1
+	density = 0
 	armor = list(melee = 50, bullet = 20, laser = 0, energy = 100, bomb = 10, bio = 100, rad = 100, fire = 90, acid = 50)
-	var/locked = TRUE
-	var/open = FALSE
+	var/locked = 1
+	var/open = 0
+	obj_integrity = 150
 	max_integrity = 150
 	integrity_failure = 50
 
@@ -22,7 +23,7 @@
 	return ..()
 
 /obj/structure/fireaxecabinet/attackby(obj/item/I, mob/user, params)
-	if(iscyborg(user) || istype(I, /obj/item/device/multitool))
+	if(iscyborg(user) || istype(I,/obj/item/device/multitool))
 		toggle_lock(user)
 	else if(istype(I, /obj/item/weapon/weldingtool) && user.a_intent == INTENT_HELP && !broken)
 		var/obj/item/weapon/weldingtool/WT = I
